@@ -20,7 +20,7 @@ AD_List = [
 ]
 
 
-@app.route('/api/ad', methods=['GET'])
+@app.route('/api/ad/', methods=['GET'])
 def start():
     return jsonify({'AD_List': AD_List})
 
