@@ -22,7 +22,7 @@ AD_List = [
 
 @app.route('/api/ad/', methods=['GET'])
 def start():
-    return jsonify({'AD_List': AD_List})
+    return jsonify(AD_List)
 
 
 if __name__ == '__main__':
