@@ -19,11 +19,26 @@ AD_List = [
     }
 ]
 
+Upgrade_Data = [
+    {
+        'show_update': True,
+        'must_update': False,
+        'update_url': 'http://dldir1.qq.com/weixin/android/weixin704android1420.apk',
+        'update_message': "1、床前明月光\n2、疑似地上霜\n3、举头望明月\n4、低头思故乡",
+        'code': '1000'
+    }
+]
+
 
 @app.route('/api/ad/', methods=['GET'])
-def start():
+def start_ad():
     return jsonify(AD_List)
 
 
+@app.route('/api/update/', methods=['GET'])
+def start_update():
+    return jsonify(Upgrade_Data)
+
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='127.0.0.1', port=5000, debug=False)
