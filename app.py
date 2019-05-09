@@ -13,6 +13,7 @@ AD_List = [
         'splash_goto': 'https://www.sina.com.cn',
         'showCard_url': 'http://img.zcool.cn/community/01b4345732e24e6ac725263177fd29.jpg',
         'showCard_goto': 'https://www.baidu.com',
+        'card_index': 3,
         'list_url': 'http://img.zcool.cn/community/01acaf5722af116ac7253812b32635.jpg@1280w_1l_2o_100sh.jpg',
         'list_goto': 'https://www.baidu.com',
         'code': '1000'
