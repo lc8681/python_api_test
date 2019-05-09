@@ -21,7 +21,7 @@ AD_List = [
 
 Upgrade_Data = [
     {
-        'show_update': True,
+        'show_update': False,
         'must_update': False,
         'update_url': 'http://dldir1.qq.com/weixin/android/weixin704android1420.apk',
         'update_message': "1、床前明月光\n2、疑似地上霜\n3、举头望明月\n4、低头思故乡",
