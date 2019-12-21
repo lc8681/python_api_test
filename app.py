@@ -3,6 +3,7 @@ from flask import request
 from flask import redirect
 from flask import jsonify
 import json
+from ign_spider import ign_data
 
 app = Flask(__name__)
 
@@ -68,7 +69,7 @@ ign_data_list = {
             'showCard_goto': 'https://www.baidu.com',
             'card_index': 3,
             'list_url': 'http://img.zcool.cn/community/01acaf5722af116ac7253812b32635.jpg@1280w_1l_2o_100sh.jpg',
-            'list_goto': 'https://www.baidu.com',
+            'list_goto': str(ign_data(str(1))),
         },
 
     ]
@@ -87,7 +88,7 @@ def start_update():
 
 
 @app.route('/data/ign/', methods=['GET'])
-def start_update():
+def start_spider_for_ign():
     return jsonify(ign_data_list)
 
 
