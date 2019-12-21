@@ -49,30 +49,6 @@ Upgrade_Data = [
 
 ign_data_list = {
     'code': '200',
-    'data': [
-        {
-
-            'id': '1',
-            'splash_url': 'https://img.zcool.cn/community/012de8571049406ac7251f05224c19.png@1280w_1l_2o_100sh.png',
-            'splash_goto': 'https://www.sina.com.cn',
-            'showCard_url': 'http://img.zcool.cn/community/01b4345732e24e6ac725263177fd29.jpg',
-            'showCard_goto': 'https://www.baidu.com',
-            'card_index': 3,
-            'list_url': 'http://img.zcool.cn/community/01acaf5722af116ac7253812b32635.jpg@1280w_1l_2o_100sh.jpg',
-            'list_goto': 'https://www.baidu.com',
-        },
-        {
-            'id': '1',
-            'splash_url': 'https://img.zcool.cn/community/012de8571049406ac7251f05224c19.png@1280w_1l_2o_100sh.png',
-            'splash_goto': 'https://www.sina.com.cn',
-            'showCard_url': 'http://img.zcool.cn/community/01b4345732e24e6ac725263177fd29.jpg',
-            'showCard_goto': 'https://www.baidu.com',
-            'card_index': 3,
-            'list_url': 'http://img.zcool.cn/community/01acaf5722af116ac7253812b32635.jpg@1280w_1l_2o_100sh.jpg',
-            'list_goto': str(ign_data(str(1))),
-        },
-
-    ]
 
 }
 
@@ -89,6 +65,9 @@ def start_update():
 
 @app.route('/data/ign/', methods=['GET'])
 def start_spider_for_ign():
+    page = request.args.get('page')
+    final_data = ign_data(page)
+    ign_data_list.update(data=final_data)
     return jsonify(ign_data_list)
 
 
