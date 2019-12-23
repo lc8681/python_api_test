@@ -15,7 +15,7 @@ def ign_data(pageNum):
         title = i.img['alt']
         img = i.img['src']
         score = str(re.findall(r"\d+\.?\d*", str(i.find('span')))).replace('[', '').replace(']', '').replace("'", '')
-        goto_url = i.a['href']
+        goto_url = str(i.a['href']).replace('www.ign.中国', 'www.ign.xn--fiqs8s')
         if score is '':
             score = '无'
         dict.update(title=title, img=img, score=score, goto_url=goto_url)
