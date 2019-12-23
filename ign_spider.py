@@ -19,7 +19,7 @@ def ign_data(pageNum):
         goto_url = i.a['href']
         if score is '':
             score = '无'
-        dict.update(title=title.decode('utf-8'), img=img.decode('utf-8'), score=score, goto_url=goto_url.decode('utf-8'))
+        dict.update(title=title, img=img, score=score, goto_url=goto_url)
         final_list.append(dict)
     return final_list
 
