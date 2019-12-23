@@ -13,7 +13,7 @@ def ign_data(pageNum):
     for i in soup.select('article'):
         dict = {}
         title = i.img['alt']
-        img = i.img['src']
+        img = "http://www.ign.xn--fiqs8s" + i.img['src']
         score = str(re.findall(r"\d+\.?\d*", str(i.find('span')))).replace('[', '').replace(']', '').replace("'", '')
         goto_url = str(i.a['href']).replace('www.ign.中国', 'www.ign.xn--fiqs8s')
         if score is '':
